@@ -45,11 +45,11 @@ local set_groups = function()
     { hg = "Keyword", fg = c.gray_blue, gui = cfg.keyword_style }, -- any other keyword
     { hg = "Exception", fg = c.purple }, -- try, catch, throw
     { hg = "PreProc", fg = c.fg }, -- generic Preprocessor
-    { hg = "Include", fg = c.blue }, -- preprocessor #include
+    { hg = "Include", fg = c.red }, -- preprocessor #include
     { hg = "Define", fg = c.cyan }, -- preprocessor #define
     { hg = "Macro", fg = c.red, gui = "bold" }, -- same as Define
     { hg = "PreCondit", fg = c.cyan }, -- preprocessor #if, #else, #endif, etc.
-    { hg = "Type", fg = c.bright_red, gui = "bold" }, -- int, long, char, etc.
+    { hg = "Type", fg = c.white, gui = "bold" }, -- int, long, char, etc.
     { hg = "StorageClass", fg = c.yellow }, -- static, register, volatile, etc.
     { hg = "Structure", fg = c.bright_yellow }, -- struct, union, enum, etc.
     { hg = "Typedef", fg = c.yellow }, -- A typedef
@@ -156,7 +156,7 @@ local set_groups = function()
     { hg = "@constant.builtin", fg = c.yellow },
     { hg = "@namespace", fg = c.bright_magenta, gui = "italic,bold" },
     { hg = "@parameter", fg = c.cyan },
-    { hg = "@property", fg = c.bright_cyan },
+    { hg = "@property", fg = c.magenta },
     { hg = "@lsp.type.property", fg = c.cyan },
     { hg = "@punctuation", fg = c.gray06 },
     { hg = "@punctuation.delimiter", fg = c.fg },
