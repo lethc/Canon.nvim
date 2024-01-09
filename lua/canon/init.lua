@@ -47,7 +47,7 @@ local set_groups = function()
     { hg = "PreProc", fg = c.fg }, -- generic Preprocessor
     { hg = "Include", fg = c.red }, -- preprocessor #include
     { hg = "Define", fg = c.cyan }, -- preprocessor #define
-    { hg = "Macro", fg = c.red, gui = "bold" }, -- same as Define
+    { hg = "Macro", fg = c.yellow, gui = "bold" }, -- same as Define
     { hg = "PreCondit", fg = c.cyan }, -- preprocessor #if, #else, #endif, etc.
     { hg = "Type", fg = c.white, gui = "bold" }, -- int, long, char, etc.
     { hg = "StorageClass", fg = c.yellow }, -- static, register, volatile, etc.
@@ -242,8 +242,8 @@ local set_groups = function()
 
     -- Cmp
     { hg = "CmpItemAbbrDeprecated", fg = c.gray06, gui = "strikethrough" },
-    { hg = "CmpItemAbbrMatch", fg = c.red, gui = "bold" },
-    { hg = "CmpItemAbbrMatchFuzzy", fg = c.red, gui = "bold" },
+    { hg = "CmpItemAbbrMatch", fg = c.yellow, gui = "bold" },
+    { hg = "CmpItemAbbrMatchFuzzy", fg = c.yellow, gui = "bold" },
     { hg = "CmpItemMenu", fg = c.gray05 },
     { hg = "CmpItemKindText", fg = c.gray06 },
     { hg = "CmpItemKindFunction", fg = c.cyan },
