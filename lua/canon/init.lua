@@ -110,7 +110,7 @@ local set_groups = function()
     { hg = "TabLineSel", fg = c.white }, -- tab pages line, active tab page label
     { hg = "Terminal", fg = c.fg, bg = c.black }, -- terminal window (see terminal-size-color)
     { hg = "Title", fg = c.blue }, -- titles for output from " =set all", ":autocmd" etc.
-    { hg = "Visual", bg = c.gray08 }, -- Visual mode selection
+    { hg = "Visual", bg = c.gray02 }, -- Visual mode selection
     { hg = "VisualNOS", bg = c.bright_black }, -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
     { hg = "WarningMsg", fg = c.yellow }, -- warning messages
     { hg = "WildMenu", fg = c.black, bg = c.blue }, -- current match in 'wildmenu' completion
@@ -212,9 +212,9 @@ local set_groups = function()
     { hg = "DiagnosticUnderlineHint", fg = c.cyan, gui = "underline" },
 
     -- Neovim's built-in language server client
-    { hg = "LspReferenceWrite", bg = c.gray02 },
-    { hg = "LspReferenceText", bg = c.gray02 },
-    { hg = "LspReferenceRead", bg = c.gray02 },
+    { hg = "LspReferenceWrite", bg = c.gray03 },
+    { hg = "LspReferenceText", bg = c.gray03 },
+    { hg = "LspReferenceRead", bg = c.gray03 },
     { hg = "LspSignatureActiveParameter", fg = c.yellow, gui = "bold" },
 
     -- GitSigns
