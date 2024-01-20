@@ -254,6 +254,10 @@ local set_groups = function()
     -- Telescope
     { hg = "TelescopeMatching", fg = c.orange, gui = "bold" },
 
+    -- Flash
+    { hg = "FlashBackdrop", fg = c.gray06 },
+    { hg = "FlashLabel", bg = c.orange, fg = c.bg, gui = "bold" },
+
     -- Others
     { hg = "yamlFlowIndicator", fg = c.yellow, gui = "bold" },
     { hg = "yamlFlowString", fg = c.bright_cyan  },
