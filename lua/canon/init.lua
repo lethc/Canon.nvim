@@ -18,7 +18,7 @@ local set_terminal_colors = function()
   vim.g.terminal_color_10 = c.bright_green
   vim.g.terminal_color_11 = c.bright_yellow
   vim.g.terminal_color_12 = c.bright_blue
-  vim.g.terminal_color_13 = c.bright_magenta
+  vim.g.terminal_color_13 = c.super_bright_magenta
   vim.g.terminal_color_14 = c.bright_cyan
   vim.g.terminal_color_15 = c.bright_white
   vim.g.terminal_color_background = c.bg
@@ -36,13 +36,12 @@ local set_groups = function()
     { hg = "Boolean", fg = c.yellow, cfg.boolean_style }, -- a boolean constant: TRUE, false
     { hg = "Float", fg = c.magenta }, -- a floating point constant: 2.3e10
     { hg = "Identifier", fg = c.fg, cfg.variable_style }, -- any variable name
-    { hg = "Function", fg = c.cyan, gui = cfg.function_style }, -- function name (also: methods for classes)
+    { hg = "Function", fg = c.blue, gui = cfg.function_style }, -- function name (also: methods for classes)
     { hg = "Statement", fg = c.white }, -- any statement
     { hg = "Conditional", fg = c.blue }, -- if, then, else, endif, switch, etc.
     { hg = "Repeat", fg = c.blue }, -- for, do, while, etc.
     { hg = "Label", fg = c.blue }, -- case, default, etc.
     { hg = "Operator", fg = c.yellow }, -- sizeof", "+", "*", etc.
-    { hg = "Keyword", fg = c.gray_blue, gui = cfg.keyword_style }, -- any other keyword
     { hg = "Exception", fg = c.purple }, -- try, catch, throw
     { hg = "PreProc", fg = c.fg }, -- generic Preprocessor
     { hg = "Include", fg = c.red }, -- preprocessor #include
@@ -63,6 +62,19 @@ local set_groups = function()
     { hg = "Ignore" }, -- left blank, hidden
     { hg = "Error", fg = c.red }, -- any erroneous construct
     { hg = "Todo", fg = c.yellow }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+
+    --- Keywords 
+    { hg = "Keyword", fg = c.cyan, gui = cfg.keyword_style }, -- any other keyword
+    { hg = "@keyword.function", fg = c.cyan, gui = cfg.keyword_style }, -- any other keyword
+    { hg = "@keyword.directive", fg = c.cyan, gui = cfg.keyword_style }, -- any other keyword
+    { hg = "@keyword.import", fg = c.red, gui = cfg.keyword_style }, -- any other keyword
+
+    -- Illuminate
+    { hg = "illuminatedWord", bg = c.gray03 },
+    { hg = "illuminatedCurWord", bg = c.gray03 },
+    { hg = "IlluminatedWordText", bg = c.gray03 },
+    { hg = "IlluminatedWordRead", bg = c.gray03 },
+    { hg = "IlluminatedWordWrite", bg = c.gray03 },
 
     -- Highlighting Groups (descriptions and ordering from ` =h highlight-groups`)
     { hg = "ColorColumn", bg = c.gray01 }, -- used for the columns set with 'colorcolumn'
@@ -154,7 +166,7 @@ local set_groups = function()
     { hg = "@boolean", fg = c.yellow, gui = cfg.boolean_style },
     { hg = "@constructor", fg = c.yellow },
     { hg = "@constant.builtin", fg = c.yellow },
-    { hg = "@module", fg = c.bright_magenta, gui = "italic,bold" },
+    { hg = "@module", fg = c.magenta, gui = "italic,bold" },
     { hg = "@property", fg = c.magenta },
     { hg = "@lsp.type.property", fg = c.cyan },
     { hg = "@punctuation", fg = c.gray06 },
@@ -197,19 +209,33 @@ local set_groups = function()
     { hg = "@markup.link.url.markdown_inline", fg = c.gray04, gui = "underline" },
     -- { hg = "@markup.raw.markdown_inline", fg = c.gray04, gui = "bold"  },
     { hg = "@markup.strong.markdown_inline", fg = c.gray07, gui = "bold"  },
-    { hg = "@markup.emphasis.markdown_inline", fg = c.gray07, gui = "italic"  },
+    { hg = "@function.macro", fg = c.cyan, },
+    { hg = "@type.qualifier", fg = c.cyan, },
 
+    -- LSP Semantic Token Groups
+    { hg = "@lsp.typemod.macro.defaultLibrary", fg = c.green },
+    { hg = "@lsp.typemod.function.defaultLibrary", fg = c.green },
+    { hg = "@lsp.typemod.method.defaultLibrary", fg = c.green },
+    { hg = "@lsp.typemod.enumMember.defaultLibrary", fg = c.green },
 
+    { hg = "@lsp.type.enumMember", fg = c.cyan },
+    { hg = "@lsp.type.keyword", fg = c.cyan },
+    { hg = "@lsp.type.namespace", fg = c.red },
+    { hg = "@lsp.type.macro", fg = c.red },
+    { hg = "@lsp.type.struct", fg = c.blue },
+    { hg = "@lsp.typemod.enum", fg = c.cyan },
+    { hg = "@lsp.type.interface", fg = c.cyan },
+    { hg = "@lsp.type.parameter", fg = c.yellow },
 
     -- Diagnostics
-    { hg = "DiagnosticError", fg = c.bright_red },
-    { hg = "DiagnosticWarn", fg = c.bright_yellow },
-    { hg = "DiagnosticInfo", fg = c.bright_yellow },
-    { hg = "DiagnosticHint", fg = c.bright_blue2 },
-    { hg = "DiagnosticUnderlineError", fg = c.red, gui = "underline" },
-    { hg = "DiagnosticUnderlineWarn", fg = c.yellow, gui = "underline" },
-    { hg = "DiagnosticUnderlineInfo", fg = c.blue, gui = "underline" },
-    { hg = "DiagnosticUnderlineHint", fg = c.cyan, gui = "underline" },
+    { hg = "DiagnosticError",fg =c.super_bright_magenta  },
+    { hg = "DiagnosticWarn", fg = c.orange },
+    { hg = "DiagnosticInfo", fg = c.blue2 },
+    { hg = "DiagnosticHint", fg = c.cyan2 },
+    { hg = "DiagnosticUnderlineError", bg = c.dark_red, fg =c.super_bright_magenta ,gui = "underline" },
+    { hg = "DiagnosticUnderlineWarn",bg = c.dark_yellow ,fg = c.orange, gui = "underline" },
+    { hg = "DiagnosticUnderlineInfo",bg = c.dark_blue ,fg = c.blue2, gui = "underline" },
+    { hg = "DiagnosticUnderlineHint",bg = c.dark_cyan ,fg = c.cyan2, gui = "underline" },
 
     -- Neovim's built-in language server client
     { hg = "LspReferenceWrite", bg = c.gray03 },
