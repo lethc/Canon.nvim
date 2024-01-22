@@ -33,15 +33,15 @@ local set_groups = function()
     { hg = "String", fg = c.medium_gray_blue }, -- a string constant: "this is a string"
     { hg = "Character", fg = c.green }, -- a character constant: 'c', '\n'
     { hg = "Number", fg = c.red }, -- a number constant: 234, 0xff
-    { hg = "Boolean", fg = c.yellow, cfg.boolean_style }, -- a boolean constant: TRUE, false
+    { hg = "Boolean", fg = c.red, cfg.boolean_style }, -- a boolean constant: TRUE, false
     { hg = "Float", fg = c.magenta }, -- a floating point constant: 2.3e10
     { hg = "Identifier", fg = c.fg, cfg.variable_style }, -- any variable name
-    { hg = "Function", fg = c.blue, gui = cfg.function_style }, -- function name (also: methods for classes)
+    { hg = "Function", fg = c.cyan, gui = cfg.function_style }, -- function name (also: methods for classes)
     { hg = "Statement", fg = c.white }, -- any statement
     { hg = "Conditional", fg = c.blue }, -- if, then, else, endif, switch, etc.
     { hg = "Repeat", fg = c.blue }, -- for, do, while, etc.
     { hg = "Label", fg = c.blue }, -- case, default, etc.
-    { hg = "Operator", fg = c.yellow }, -- sizeof", "+", "*", etc.
+    { hg = "Operator", fg = c.white }, -- sizeof", "+", "*", etc.
     { hg = "Exception", fg = c.purple }, -- try, catch, throw
     { hg = "PreProc", fg = c.fg }, -- generic Preprocessor
     { hg = "Include", fg = c.red }, -- preprocessor #include
@@ -50,7 +50,7 @@ local set_groups = function()
     { hg = "PreCondit", fg = c.cyan }, -- preprocessor #if, #else, #endif, etc.
     { hg = "Type", fg = c.white, gui = "bold" }, -- int, long, char, etc.
     { hg = "StorageClass", fg = c.yellow }, -- static, register, volatile, etc.
-    { hg = "Structure", fg = c.bright_yellow }, -- struct, union, enum, etc.
+    { hg = "Structure", fg = c.gray_blue, gui = "bold" }, -- struct, union, enum, etc.
     { hg = "Typedef", fg = c.yellow }, -- A typedef
     { hg = "Special", fg = c.blue }, -- any special symbol
     { hg = "SpecialChar", fg = c.yellow }, -- special character in a constant
@@ -64,10 +64,10 @@ local set_groups = function()
     { hg = "Todo", fg = c.yellow }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     --- Keywords 
-    { hg = "Keyword", fg = c.cyan, gui = cfg.keyword_style }, -- any other keyword
+    { hg = "Keyword", fg = c.gray_blue, gui = cfg.keyword_style }, -- any other keyword
     { hg = "@keyword.function", fg = c.cyan, gui = cfg.keyword_style }, -- any other keyword
     { hg = "@keyword.directive", fg = c.cyan, gui = cfg.keyword_style }, -- any other keyword
-    { hg = "@keyword.import", fg = c.red, gui = cfg.keyword_style }, -- any other keyword
+    { hg = "@keyword.import", fg = c.gray_blue, gui = cfg.keyword_style }, -- any other keyword
 
     -- Illuminate
     { hg = "illuminatedWord", bg = c.gray03 },
@@ -163,12 +163,12 @@ local set_groups = function()
     { hg = "markdownCodeDelimiter", fg = c.gray05 },
 
     -- Tree sitter
-    { hg = "@boolean", fg = c.yellow, gui = cfg.boolean_style },
+    { hg = "@boolean", fg = c.red, gui = cfg.boolean_style },
     { hg = "@constructor", fg = c.yellow },
-    { hg = "@constant.builtin", fg = c.yellow },
-    { hg = "@module", fg = c.magenta, gui = "italic,bold" },
+    { hg = "@constant.builtin", fg = c.white },
+    { hg = "@module", fg = c.white, gui = "italic" },
     { hg = "@property", fg = c.magenta },
-    { hg = "@lsp.type.property", fg = c.cyan },
+    { hg = "@lsp.type.property", fg = c.white },
     { hg = "@punctuation", fg = c.gray06 },
     { hg = "@punctuation.delimiter", fg = c.fg },
     { hg = "@punctuation.bracket", fg = c.white },
@@ -177,16 +177,16 @@ local set_groups = function()
     { hg = "@tag", fg = c.bright_red },
     { hg = "@tag.attribute", fg = c.bright_blue, gui = "italic" },
     { hg = "@tag.delimiter", fg = c.gray06 },
-    { hg = "@type.builtin", fg = c.magenta },
+    { hg = "@type.builtin", fg = c.fg },
     { hg = "@variable", fg = c.fg, gui = cfg.variable_style },
-    { hg = "@variable.parameter", fg = c.cyan, gui = cfg.variable_style },
+    { hg = "@variable.parameter", fg = c.white, gui = cfg.variable_style },
     -- Tree sitter language specific overrides
     { hg = "@constructor.javascript", fg = c.yellow },
     { hg = "@keyword.clojure", fg = c.bright_cyan, gui = cfg.keyword_style },
     { hg = "@keyword.function.clojure", fg = c.bright_cyan, gui = cfg.function_style },
     -- { hg = "@punctuation.bracket.rust", fg = c.yellow },
     { hg = "@field.java", fg = c.cyan  },
-    { hg = "@variable.member", fg = c.cyan  },
+    { hg = "@variable.member", fg = c.white  },
     -- TypeScript, REACT
     { hg = "@keyword.function.tsx", fg = c.cyan  },
     { hg = "@tag.tsx", fg = c.cyan  },
@@ -210,22 +210,22 @@ local set_groups = function()
     -- { hg = "@markup.raw.markdown_inline", fg = c.gray04, gui = "bold"  },
     { hg = "@markup.strong.markdown_inline", fg = c.gray07, gui = "bold"  },
     { hg = "@function.macro", fg = c.cyan, },
-    { hg = "@type.qualifier", fg = c.cyan, },
+    { hg = "@type.qualifier", fg = c.white, gui = "bold" },
 
     -- LSP Semantic Token Groups
-    { hg = "@lsp.typemod.macro.defaultLibrary", fg = c.green },
-    { hg = "@lsp.typemod.function.defaultLibrary", fg = c.green },
-    { hg = "@lsp.typemod.method.defaultLibrary", fg = c.green },
-    { hg = "@lsp.typemod.enumMember.defaultLibrary", fg = c.green },
+    { hg = "@lsp.typemod.macro.defaultLibrary", fg = c.cyan },
+    { hg = "@lsp.typemod.function.defaultLibrary", fg = c.cyan },
+    { hg = "@lsp.typemod.method.defaultLibrary", fg = c.cyan },
+    { hg = "@lsp.typemod.enumMember.defaultLibrary", fg = c.white, gui = "bold" },
 
-    { hg = "@lsp.type.enumMember", fg = c.cyan },
-    { hg = "@lsp.type.keyword", fg = c.cyan },
-    { hg = "@lsp.type.namespace", fg = c.red },
-    { hg = "@lsp.type.macro", fg = c.red },
-    { hg = "@lsp.type.struct", fg = c.blue },
-    { hg = "@lsp.typemod.enum", fg = c.cyan },
-    { hg = "@lsp.type.interface", fg = c.cyan },
-    { hg = "@lsp.type.parameter", fg = c.yellow },
+    { hg = "@lsp.type.enumMember", fg = c.white, gui = "bold" },
+    { hg = "@lsp.type.keyword", fg = c.gray_blue },
+    { hg = "@lsp.type.namespace", fg = c.gray_blue },
+    { hg = "@lsp.type.macro", fg = c.cyan },
+    { hg = "@lsp.type.struct", fg = c.gray_blue, gui = "bold" },
+    { hg = "@lsp.typemod.enum", fg = c.gray_blue, gui = "bold" },
+    { hg = "@lsp.type.interface", fg = c.gray_blue, gui = "bold" },
+    { hg = "@lsp.type.parameter", fg = c.fg },
 
     -- Diagnostics
     { hg = "DiagnosticError",fg =c.super_bright_magenta  },
