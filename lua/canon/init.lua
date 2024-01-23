@@ -208,6 +208,7 @@ local set_groups = function()
     { hg = "@markup.link", fg = c.yellow  },
     { hg = "@markup.link.url.markdown_inline", fg = c.gray04, gui = "underline" },
     { hg = "@markup.raw.markdown_inline", fg = c.cyan, bg = c.dark_cyan, gui = "bold"  },
+    { hg = "markdownCodeBlock", fg = c.cyan, bg = c.dark_cyan, gui = "bold"  },
     { hg = "@markup.strong.markdown_inline", fg = c.gray07, gui = "bold"  },
     { hg = "@function.macro", fg = c.cyan, },
     { hg = "@type.qualifier", fg = c.white, gui = "bold" },
