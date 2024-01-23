@@ -90,7 +90,7 @@ local set_groups = function()
     { hg = "DiffText", bg = c.dark_blue }, -- diff mode: Changed text within a changed line
     { hg = "ErrorMsg", fg = c.red }, -- error messages on the command line
     { hg = "VertSplit", fg = c.gray02 }, -- the column separating vertically split windows
-    { hg = "Folded", fg = c.gray04 }, -- line used for closed folds
+    { hg = "Folded", fg = c.blue, bg = c.gray02 }, -- line used for closed folds
     { hg = "FoldColumn" }, --' foldcolumn'
     { hg = "SignColumn" }, -- column where signs are displayed
     { hg = "IncSearch", fg = c.bright_yellow, bg = c.gray03 }, --' incsearch' highlighting; also used for the text replaced with ":s///c"
@@ -207,7 +207,7 @@ local set_groups = function()
     { hg = "@markup.heading.markdown", fg = c.blue, gui = "bold"  },
     { hg = "@markup.link", fg = c.yellow  },
     { hg = "@markup.link.url.markdown_inline", fg = c.gray04, gui = "underline" },
-    -- { hg = "@markup.raw.markdown_inline", fg = c.gray04, gui = "bold"  },
+    { hg = "@markup.raw.markdown_inline", fg = c.cyan, bg = c.dark_cyan, gui = "bold"  },
     { hg = "@markup.strong.markdown_inline", fg = c.gray07, gui = "bold"  },
     { hg = "@function.macro", fg = c.cyan, },
     { hg = "@type.qualifier", fg = c.white, gui = "bold" },
