@@ -174,8 +174,8 @@ local set_groups = function()
     { hg = "@punctuation.bracket", fg = c.white },
     { hg = "@markup.list", fg = c.gray04 },
     { hg = "@string.special.symbol", fg = c.yellow },
-    { hg = "@tag", fg = c.bright_red },
-    { hg = "@tag.attribute", fg = c.bright_blue, gui = "italic" },
+    { hg = "@tag", fg = c.blue },
+    { hg = "@tag.attribute", fg = c.cyan, gui = "italic" },
     { hg = "@tag.delimiter", fg = c.gray06 },
     { hg = "@type.builtin", fg = c.fg },
     { hg = "@variable", fg = c.fg, gui = cfg.variable_style },
@@ -210,6 +210,7 @@ local set_groups = function()
     { hg = "@markup.raw.markdown_inline", fg = c.cyan, bg = c.dark_cyan, gui = "bold"  },
     { hg = "markdownCodeBlock", fg = c.cyan, bg = c.dark_cyan, gui = "bold"  },
     { hg = "@markup.strong.markdown_inline", fg = c.gray07, gui = "bold"  },
+    { hg = "@markup.quote.markdown", fg = c.yellow, bg = c.dark_yellow, gui = "bold"  },
     { hg = "@function.macro", fg = c.cyan, },
     { hg = "@type.qualifier", fg = c.white, gui = "bold" },
 
