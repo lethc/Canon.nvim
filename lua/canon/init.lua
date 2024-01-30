@@ -172,7 +172,7 @@ local set_groups = function()
     { hg = "@punctuation", fg = c.gray06 },
     { hg = "@punctuation.delimiter", fg = c.fg },
     { hg = "@punctuation.bracket", fg = c.white },
-    { hg = "@markup.list", fg = c.gray04 },
+    { hg = "@markup.list", fg = c.red },
     { hg = "@string.special.symbol", fg = c.yellow },
     { hg = "@tag", fg = c.blue },
     { hg = "@tag.attribute", fg = c.cyan, gui = "italic" },
@@ -286,6 +286,15 @@ local set_groups = function()
     -- Flash
     { hg = "FlashBackdrop", fg = c.gray06 },
     { hg = "FlashLabel", bg = c.orange, fg = c.bg, gui = "bold" },
+
+    -- Obsidian
+    -- { hg = "ObsidianBullet", fg = c.cyan },
+    -- { hg = "ObsidianTodo", fg = c.orange },
+    -- { hg = "ObsidianDone", fg = c.green },
+    -- { hg = "ObsidianRightArrow", fg = c.green },
+    -- { hg = "ObsidianTilde", fg = c.green },
+    -- { hg = "ObsidianExtLinkIcon", fg = c.green },
+    -- { hg = "ObsidianRefText", fg = c.green },
 
     -- Others
     { hg = "yamlFlowIndicator", fg = c.yellow, gui = "bold" },
