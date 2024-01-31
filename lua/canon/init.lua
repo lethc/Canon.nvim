@@ -287,15 +287,6 @@ local set_groups = function()
     { hg = "FlashBackdrop", fg = c.gray06 },
     { hg = "FlashLabel", bg = c.orange, fg = c.bg, gui = "bold" },
 
-    -- Obsidian
-    -- { hg = "ObsidianBullet", fg = c.cyan },
-    -- { hg = "ObsidianTodo", fg = c.orange },
-    -- { hg = "ObsidianDone", fg = c.green },
-    -- { hg = "ObsidianRightArrow", fg = c.green },
-    -- { hg = "ObsidianTilde", fg = c.green },
-    -- { hg = "ObsidianExtLinkIcon", fg = c.green },
-    -- { hg = "ObsidianRefText", fg = c.green },
-
     -- Others
     { hg = "yamlFlowIndicator", fg = c.yellow, gui = "bold" },
     { hg = "yamlFlowString", fg = c.bright_cyan  },
