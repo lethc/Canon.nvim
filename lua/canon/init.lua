@@ -85,9 +85,9 @@ local set_groups = function()
     { hg = "Directory", fg = c.blue }, -- directory names (and other special names in listings)
     -- { hg = "DiffAdd", bg = c.dark_green, fg = c.black }, -- diff mode: Added line
     { hg = "DiffAdd", bg = c.dark_green }, -- diff mode: Added line
-    { hg = "DiffChange", fg = c.bright_blue, bg = c.dark_blue,gui = "underline", cterm = "underline" }, -- diff mode: Changed line
-    { hg = "DiffDelete", bg = c.bright_red, fg = c.dark_red }, -- diff mode: Deleted line
-    { hg = "DiffText", bg = c.dark_blue }, -- diff mode: Changed text within a changed line
+    { hg = "DiffChange", bg = c.dark_blue, cterm = "underline" }, -- diff mode: Changed line
+    { hg = "DiffDelete", bg = c.dark_red, fg = c.bright_red }, -- diff mode: Deleted line
+    { hg = "DiffText", bg = c.gray08 }, -- diff mode: Changed text within a changed line
     { hg = "ErrorMsg", fg = c.red }, -- error messages on the command line
     { hg = "VertSplit", fg = c.gray02 }, -- the column separating vertically split windows
     { hg = "Folded", fg = c.fg, bg = c.gray08 }, -- line used for closed folds
