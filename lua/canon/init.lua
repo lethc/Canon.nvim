@@ -108,7 +108,7 @@ local set_groups = function()
     { hg = "Question", fg = c.blue }, -- hit-enter prompt and yes/no questions
     { hg = "QuickFixLine", fg = c.cyan, bg = c.gray02 }, -- Current quickfix item in the quickfix window.
     { hg = "Search", fg = c.orange, bg = c.gray01 }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
-    { hg = "SpecialKey", fg = c.yellow }, -- Meta and special keys listed with " =map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
+    { hg = "SpecialKey", fg = c.gray08 }, -- Meta and special keys listed with " =map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
     -- { hg = "SpellBad", fg = c.bright_red, gui = "underline" }, -- Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
     -- { hg = "SpellCap", fg = c.yellow, gui = "underline" }, -- Word that should start with a capital. This will be combined with the highlighting used otherwise.
     -- { hg = "SpellLocal", fg = c.bright_green, gui = "underline" }, -- Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
