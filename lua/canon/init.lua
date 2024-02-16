@@ -210,6 +210,7 @@ local set_groups = function()
     { hg = "@markup.raw.markdown_inline", fg = c.cyan, bg = c.dark_cyan, gui = "bold"  },
     { hg = "markdownCodeBlock", fg = c.cyan, bg = c.dark_cyan, gui = "bold"  },
     { hg = "@markup.strong.markdown_inline", fg = c.gray07, gui = "bold"  },
+    { hg = "@markup.strong", fg = c.gray07, gui = "bold"  },
     { hg = "@markup.italic.markdown_inline", fg = c.medium_gray_blue, gui = "italic"  },
     { hg = "@markup.quote.markdown", fg = c.cyan2, bg = c.dark_cyan, gui = "bold"  },
     { hg = "@function.macro", fg = c.cyan, },
@@ -229,6 +230,9 @@ local set_groups = function()
     { hg = "@lsp.typemod.enum", fg = c.gray_blue, gui = "bold" },
     { hg = "@lsp.type.interface", fg = c.gray_blue, gui = "bold" },
     { hg = "@lsp.type.parameter", fg = c.fg },
+
+    -- HTML
+    { hg = "@string.special.url", fg = c.gray_blue },
 
     -- Diagnostics
     { hg = "DiagnosticError",fg =c.super_bright_magenta  },
