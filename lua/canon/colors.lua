@@ -6,7 +6,7 @@ M.dark = {
   fg = "#E1E1E1", --##F8F8F2
   bg_dark = "#151515",
   -- Normal
-  black = "#151515",
+  black = "#131011",
   red = "#b46958",
   green = "#90A959",
   yellow = "#F4BF75",
@@ -34,7 +34,7 @@ M.dark = {
   super_bright_green = "#55FF6E",
   super_bright_cyan = "#55FEFF",
   -- Grays
-  gray01 = "#171717",
+  gray01 = "#1b1b1b",
   gray02 = "#373737",
   gray03 = "#36383F",
   gray04 = "#727272",
