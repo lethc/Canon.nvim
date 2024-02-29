@@ -37,7 +37,7 @@ local set_groups = function()
         { hg = "Float", fg = c.magenta }, -- a floating point constant: 2.3e10
         { hg = "Identifier", fg = c.fg, cfg.variable_style }, -- any variable name
         { hg = "Function", fg = c.cyan, gui = cfg.function_style }, -- function name (also: methods for classes)
-        { hg = "Statement", fg = c.white }, -- any statement
+        { hg = "Statement", fg = c.gray_blue }, -- any statement
         { hg = "Conditional", fg = c.blue }, -- if, then, else, endif, switch, etc.
         { hg = "Repeat", fg = c.blue }, -- for, do, while, etc.
         { hg = "Label", fg = c.blue }, -- case, default, etc.
