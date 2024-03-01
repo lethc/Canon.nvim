@@ -4,6 +4,7 @@ M.dark = {
     -- Basic
     bg = "#151515",
     fg = "#E1E1E1", --##F8F8F2
+    alt_bg = "#1b1b1b",
     bg_dark = "#151515",
     -- Normal
     black = "#131011",
@@ -19,6 +20,7 @@ M.dark = {
     cyan = "#88afa2",
     cyan2 = "#75F3F4",
     white = "#E1E1E1",
+    light_gray = "#AFAFAF",
     -- Bright
     bright_black = "#202020",
     bright_red = "#984936",
@@ -34,7 +36,7 @@ M.dark = {
     super_bright_green = "#55FF6E",
     super_bright_cyan = "#55FEFF",
     -- Grays
-    gray01 = "#1b1b1b",
+    gray01 = "#202020",
     gray02 = "#373737",
     gray03 = "#36383F",
     gray04 = "#727272",
