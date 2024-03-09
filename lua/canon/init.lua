@@ -231,6 +231,8 @@ local set_groups = function()
         { hg = "@lsp.type.interface", fg = c.gray_blue, gui = "bold" },
         { hg = "@lsp.type.parameter", fg = c.fg },
 
+        { hg = "TreesitterContext", bg = c.gray01 },
+
         -- HTML
         { hg = "@string.special.url", fg = c.gray_blue },
 
