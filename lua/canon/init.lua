@@ -285,6 +285,7 @@ local set_groups = function()
         { hg = "CmpItemKindVariable", fg = c.bright_white },
         { hg = "CmpItemKindEnum", fg = c.green },
         { hg = "CmpItemKindSnippet", fg = c.yellow },
+        { hg = "CursorLineBG", bg = c.gray02 },
 
         -- Telescope
         { hg = "TelescopeMatching", fg = c.orange, gui = "bold" },
