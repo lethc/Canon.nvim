@@ -96,7 +96,7 @@ local set_groups = function()
         { hg = "IncSearch", fg = c.bright_yellow, bg = c.gray03 }, --' incsearch' highlighting; also used for the text replaced with ":s///c"
         { hg = "LineNr", fg = c.gray04 }, -- Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
         { hg = "CursorLineNr" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-        { hg = "MatchParen", fg = c.yellow, gui = "underline,bold", cterm = "underline" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match.
+        { hg = "MatchParen", fg = c.blue, gui = "underline,bold", cterm = "underline" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match.
         { hg = "ModeMsg" }, --' showmode' message (e.g., "-- INSERT --")
         { hg = "MoreMsg" }, -- more-prompt
         { hg = "NonText", fg = c.gray02 }, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
@@ -107,7 +107,7 @@ local set_groups = function()
         { hg = "PmenuThumb", bg = c.gray03 }, -- Popup menu: Thumb of the scrollbar.
         { hg = "Question", fg = c.blue }, -- hit-enter prompt and yes/no questions
         { hg = "QuickFixLine", fg = c.cyan, bg = c.gray02 }, -- Current quickfix item in the quickfix window.
-        { hg = "Search", fg = c.orange, bg = c.gray01 }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
+        { hg = "Search", fg = c.yellow, bg = c.gray01 }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
         { hg = "SpecialKey", fg = c.gray08 }, -- Meta and special keys listed with " =map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
         -- { hg = "SpellBad", fg = c.bright_red, gui = "underline" }, -- Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
         -- { hg = "SpellCap", fg = c.yellow, gui = "underline" }, -- Word that should start with a capital. This will be combined with the highlighting used otherwise.
@@ -276,23 +276,45 @@ local set_groups = function()
         { hg = "HopPreview", fg = c.bright_blue },
 
         -- Cmp
+        { hg = "CursorLineBG", bg = c.gray02 },
         { hg = "CmpItemAbbrDeprecated", fg = c.gray06, gui = "strikethrough" },
-        { hg = "CmpItemAbbrMatch", fg = c.yellow, gui = "bold" },
-        { hg = "CmpItemAbbrMatchFuzzy", fg = c.yellow, gui = "bold" },
+        { hg = "CmpItemAbbrMatch", fg = c.blue, gui = "bold" },
+        { hg = "CmpItemAbbrMatchFuzzy", fg = c.bright_white, gui = "bold" },
         { hg = "CmpItemMenu", fg = c.gray05 },
         { hg = "CmpItemKindText", fg = c.gray06 },
         { hg = "CmpItemKindFunction", fg = c.cyan },
-        { hg = "CmpItemKindVariable", fg = c.bright_white },
+        { hg = "CmpItemKindVariable", fg = c.blue },
         { hg = "CmpItemKindEnum", fg = c.green },
-        { hg = "CmpItemKindSnippet", fg = c.yellow },
-        { hg = "CursorLineBG", bg = c.gray02 },
+        { hg = "CmpItemKindSnippet", fg = c.blue },
+
+        -- { hg = "CmpItemKindField", fg = c.red },
+        -- { hg = "CmpItemKindProperty", fg = c.blue },
+        -- { hg = "CmpItemKindEvent", fg = c.green },
+        -- { hg = "CmpItemKindKeyword", fg = c.gray02 },
+        -- { hg = "CmpItemKindConstant", fg = c.blue },
+        -- { hg = "CmpItemKindConstructor", fg = c.red },
+        -- { hg = "CmpItemKindReference", fg = c.blue },
+        -- { hg = "CmpItemKindStruct", fg = c.blue },
+        -- { hg = "CmpItemKindClass", fg = c.green },
+        -- { hg = "CmpItemKindModule", fg = c.yellow },
+        -- { hg = "CmpItemKindOperator", fg = c.blue },
+        -- { hg = "CmpItemKindVariable", fg = c.blue2 },
+        -- { hg = "CmpItemKindFile", fg = c.blue2 },
+        -- { hg = "CmpItemKindUnit", fg = c.dark_green },
+        -- { hg = "CmpItemKindFolder", fg = c.dark_blue },
+        -- { hg = "CmpItemKindMethod", fg = c.bright_green },
+        -- { hg = "CmpItemKindValue", fg = c.dark_yellow },
+        -- { hg = "CmpItemKindEnumMember", fg = c.bright_red },
+        -- { hg = "CmpItemKindInterface", fg = c.yellow },
+        -- { hg = "CmpItemKindColor", fg = c.blue },
+        -- { hg = "CmpItemKindTypeParameter", fg = c.cyan },
 
         -- Telescope
-        { hg = "TelescopeMatching", fg = c.orange, gui = "bold" },
+        { hg = "TelescopeMatching", fg = c.yellow, gui = "bold" },
 
         -- Flash
         { hg = "FlashBackdrop", fg = c.gray06 },
-        { hg = "FlashLabel", bg = c.orange, fg = c.bg, gui = "bold" },
+        { hg = "FlashLabel", bg = c.yellow, fg = c.bg, gui = "bold" },
 
         -- Others
         { hg = "yamlFlowIndicator", fg = c.yellow, gui = "bold" },

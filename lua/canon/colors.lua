@@ -19,6 +19,7 @@ M.dark = {
     magenta = "#AA759F",
     cyan = "#88afa2",
     cyan2 = "#75F3F4",
+    cyan3 = "#ACCFC0",
     white = "#E1E1E1",
     light_gray = "#AFAFAF",
     -- Bright
