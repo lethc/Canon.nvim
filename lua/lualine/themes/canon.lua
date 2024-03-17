@@ -8,18 +8,23 @@ return {
     },
     command = {
         a = { fg = colors.bg, bg = colors.orange, gui = "bold" },
+        z = { fg = colors.bg, bg = colors.orange, gui = "bold" },
     },
     insert = {
         a = { fg = colors.bg, bg = colors.blue, gui = "bold" },
+        z = { fg = colors.bg, bg = colors.blue, gui = "bold" },
     },
     visual = {
         a = { fg = colors.bg, bg = colors.yellow, gui = "bold" },
+        z = { fg = colors.bg, bg = colors.yellow, gui = "bold" },
     },
     terminal = {
         a = { fg = colors.bg, bg = colors.green, gui = "bold" },
+        z = { fg = colors.bg, bg = colors.green, gui = "bold" },
     },
     replace = {
         a = { fg = colors.bg, bg = colors.red, gui = "bold" },
+        z = { fg = colors.bg, bg = colors.red, gui = "bold" },
     },
     inactive = {
         a = { fg = colors.gray05, bg = colors.bg_dark, gui = "bold" },
