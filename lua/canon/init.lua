@@ -237,14 +237,14 @@ local set_groups = function()
         { hg = "@string.special.url", fg = c.gray_blue },
 
         -- Diagnostics
-        { hg = "DiagnosticError", fg = c.super_bright_magenta },
-        { hg = "DiagnosticWarn", fg = c.orange },
-        { hg = "DiagnosticInfo", fg = c.blue2 },
-        { hg = "DiagnosticHint", fg = c.cyan2 },
-        { hg = "DiagnosticUnderlineError", bg = c.dark_red, fg = c.super_bright_magenta, gui = "underline" },
-        { hg = "DiagnosticUnderlineWarn", bg = c.dark_yellow, fg = c.orange, gui = "underline" },
-        { hg = "DiagnosticUnderlineInfo", bg = c.dark_blue, fg = c.blue2, gui = "underline" },
-        { hg = "DiagnosticUnderlineHint", bg = c.dark_cyan, fg = c.cyan2, gui = "underline" },
+        { hg = "DiagnosticError", fg = c.red },
+        { hg = "DiagnosticWarn", fg = c.yellow },
+        { hg = "DiagnosticInfo", fg = c.blue },
+        { hg = "DiagnosticHint", fg = c.cyan },
+        { hg = "DiagnosticUnderlineError", bg = c.dark_red, fg = c.red, gui = "underline" },
+        { hg = "DiagnosticUnderlineWarn", bg = c.dark_yellow, fg = c.yellow, gui = "underline" },
+        { hg = "DiagnosticUnderlineInfo", bg = c.dark_blue, fg = c.blue, gui = "underline" },
+        { hg = "DiagnosticUnderlineHint", bg = c.dark_cyan, fg = c.cyan, gui = "underline" },
 
         -- Neovim's built-in language server client
         { hg = "LspReferenceWrite", bg = c.gray03 },
