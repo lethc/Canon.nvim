@@ -30,6 +30,7 @@ M.dark = {
     bright_blue = "#51657B",
     bright_blue2 = "#576f82",
     bright_cyan = "#f591b2",
+    bright_cyan2 = "#769d90",
     bright_white = "#cac9dd",
     super_bright_magenta = "#ff5555",
     super_bright_yellow = "#F6FF55",
