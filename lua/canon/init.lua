@@ -25,15 +25,56 @@ local set_terminal_colors = function()
     vim.g.terminal_color_foreground = c.fg
 end
 
+local set_link_groups = function ()
+    vim.cmd([[
+        " Keywords
+        hi! link @keyword.directive                     PreProc
+        hi! link @keyword.import                        Include
+        hi! link @annotation                            PreProc
+        hi! link @attribute                             PreProc
+        hi! link @module                                Include
+        hi! link @keyword.conditional                   Conditional
+        hi! link @keyword.debug                         Debug
+        hi! link @keyword.directive.define              Define
+        hi! link @keyword.exception                     Exception
+        hi! link @keyword.coroutine                     @keyword
+        hi! link @keyword.operator                      @operator
+        hi! link @keyword.return                        @keyword
+        hi! link @keyword.directive                     PreProc
+        hi! link @keyword.repeat                        Repeat
+        hi! link @keyword.storage                       StorageClass
+        hi! link @type.qualifier                        @keyword
+
+        hi! link @lsp.type.keyword                          @keyword
+        hi! link @lsp.type.lifetime                         @keyword.storage
+        hi! link @lsp.typemod.keyword.async                 @keyword.coroutine
+        hi! link @lsp.typemod.keyword.injected              @keyword
+
+        hi! link @lsp.type.selfKeyword                      @variable.builtin
+        hi! link @lsp.type.selfTypeKeyword                  @variable.builtin
+        hi! link @lsp.typemod.variable.defaultLibrary       @variable.builtin
+
+        hi! link @function.macro                            Macro
+        hi! link @markup.environment                        Macro
+
+        hi! link @constant                                  Constant
+        hi! link @constant.builtin                          Special
+        hi! link @constant.macro                            Define
+        hi! link @lsp.type.enumMember                       @constant
+        hi! link @lsp.typemod.enumMember.defaultLibrary     @constant.builtin
+        hi! link @lsp.typemod.variable.static               @constant
+
+        ]])
+end
 local set_groups = function()
     local highlights = {
         -- Syntax Groups (descriptions and ordering from `:h w18`)
         { hg = "Comment", fg = c.gray04, gui = cfg.comment_style }, -- any comment
-        { hg = "Constant", fg = c.red }, -- any constant
+        { hg = "Constant", fg = c.cyan }, -- any constant
         { hg = "String", fg = c.medium_gray_blue }, -- a string constant: "this is a string"
         { hg = "Character", fg = c.green }, -- a character constant: 'c', '\n'
-        { hg = "Number", fg = c.red }, -- a number constant: 234, 0xff
-        { hg = "Boolean", fg = c.red, cfg.boolean_style }, -- a boolean constant: TRUE, false
+        { hg = "Number", fg = c.magenta }, -- a number constant: 234, 0xff
+        { hg = "Boolean", fg = c.magenta, cfg.boolean_style }, -- a boolean constant: TRUE, false
         { hg = "Float", fg = c.magenta }, -- a floating point constant: 2.3e10
         { hg = "Identifier", fg = c.fg, cfg.variable_style }, -- any variable name
         { hg = "Function", fg = c.cyan, gui = cfg.function_style }, -- function name (also: methods for classes)
@@ -43,10 +84,10 @@ local set_groups = function()
         { hg = "Label", fg = c.blue }, -- case, default, etc.
         { hg = "Operator", fg = c.white }, -- sizeof", "+", "*", etc.
         { hg = "Exception", fg = c.purple }, -- try, catch, throw
-        { hg = "PreProc", fg = c.fg }, -- generic Preprocessor
+        { hg = "PreProc", fg = c.red }, -- generic Preprocessor
         { hg = "Include", fg = c.red }, -- preprocessor #include
         { hg = "Define", fg = c.cyan }, -- preprocessor #define
-        { hg = "Macro", fg = c.yellow, gui = "bold" }, -- same as Define
+        -- { hg = "Macro", fg = c.yellow, gui = "bold" }, -- same as Define
         { hg = "PreCondit", fg = c.cyan }, -- preprocessor #if, #else, #endif, etc.
         { hg = "Type", fg = c.white, gui = "bold" }, -- int, long, char, etc.
         { hg = "StorageClass", fg = c.yellow }, -- static, register, volatile, etc.
@@ -65,9 +106,9 @@ local set_groups = function()
 
         --- Keywords
         { hg = "Keyword", fg = c.gray_blue, gui = cfg.keyword_style }, -- any other keyword
-        { hg = "@keyword.function", fg = c.cyan, gui = cfg.keyword_style }, -- any other keyword
-        { hg = "@keyword.directive", fg = c.cyan, gui = cfg.keyword_style }, -- any other keyword
-        { hg = "@keyword.import", fg = c.gray_blue, gui = cfg.keyword_style }, -- any other keyword
+        { hg = "@keyword.function", fg = c.gray_blue, gui = cfg.keyword_style }, -- any other keyword
+        -- { hg = "@keyword.directive", fg = c.cyan, gui = cfg.keyword_style }, -- any other keyword
+        -- { hg = "@keyword.import", fg = c.gray_blue, gui = cfg.keyword_style }, -- any other keyword
 
         -- Illuminate
         { hg = "illuminatedWord", bg = c.gray03 },
@@ -163,10 +204,10 @@ local set_groups = function()
         { hg = "markdownCodeDelimiter", fg = c.gray05 },
 
         -- Tree sitter
-        { hg = "@boolean", fg = c.red, gui = cfg.boolean_style },
+        { hg = "@boolean", fg = c.magenta, gui = cfg.boolean_style },
         { hg = "@constructor", fg = c.cyan },
-        { hg = "@constant.builtin", fg = c.white },
-        { hg = "@module", fg = c.white, gui = "italic" },
+        -- { hg = "@constant.builtin", fg = c.white },
+        { hg = "@module.builtin", fg = c.white, gui = "italic" },
         { hg = "@property", fg = c.magenta },
         { hg = "@lsp.type.property", fg = c.white },
         { hg = "@punctuation", fg = c.gray06 },
@@ -179,6 +220,7 @@ local set_groups = function()
         { hg = "@tag.delimiter", fg = c.gray06 },
         { hg = "@type.builtin", fg = c.fg },
         { hg = "@variable", fg = c.fg, gui = cfg.variable_style },
+        { hg = "@variable.builtin", fg = c.medium_gray_blue, gui = cfg.variable_style },
         { hg = "@variable.parameter", fg = c.white, gui = cfg.variable_style },
         -- Tree sitter language specific overrides
         { hg = "@constructor.javascript", fg = c.yellow },
@@ -186,7 +228,7 @@ local set_groups = function()
         { hg = "@keyword.function.clojure", fg = c.bright_cyan, gui = cfg.function_style },
         -- { hg = "@punctuation.bracket.rust", fg = c.yellow },
         { hg = "@field.java", fg = c.cyan },
-        { hg = "@variable.member", fg = c.white },
+        { hg = "@variable.member", fg = c.cyan3 },
         -- TypeScript, REACT
         { hg = "@keyword.function.tsx", fg = c.cyan },
         { hg = "@tag.tsx", fg = c.cyan },
@@ -213,7 +255,7 @@ local set_groups = function()
         { hg = "@markup.strong", fg = c.gray07, gui = "bold" },
         { hg = "@markup.italic.markdown_inline", fg = c.medium_gray_blue, gui = "italic" },
         { hg = "@markup.quote.markdown", fg = c.bright_white, bg = c.gray01, gui = "bold,italic" },
-        { hg = "@function.macro", fg = c.cyan },
+        -- { hg = "@function.macro", fg = c.cyan },
         { hg = "@type.qualifier", fg = c.white, gui = "bold" },
 
         -- LSP Semantic Token Groups
@@ -388,6 +430,7 @@ M.colorscheme = function()
 
     set_terminal_colors()
     set_groups()
+    set_link_groups()
 end
 
 return M
