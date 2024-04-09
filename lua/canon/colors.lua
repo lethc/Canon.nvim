@@ -12,6 +12,7 @@ M.dark = {
     green = "#90A959",
     yellow = "#F4BF75",
     orange = "#FFA557",
+    orange2 = "#E38950",
     blue = "#BAD7FF",
     blue2 = "#7580F4",
     gray_blue = "#7E97AB",
