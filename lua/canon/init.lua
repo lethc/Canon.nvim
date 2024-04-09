@@ -250,7 +250,7 @@ local set_groups = function()
         { hg = "@markup.link", fg = c.cyan },
         { hg = "@markup.link.url.markdown_inline", fg = c.gray04, gui = "underline" },
         { hg = "@markup.raw.markdown_inline", fg = c.gray05, bg = c.gray09, gui = "bold" },
-        { hg = "markdownCodeBlock", fg = c.gray05, bg = c.gray09, gui = "bold" },
+        { hg = "markdownCodeBlock", fg = c.gray05, bg = c.gray09 },
         { hg = "@markup.strong.markdown_inline", fg = c.gray07, gui = "bold" },
         { hg = "@markup.strong", fg = c.gray07, gui = "bold" },
         { hg = "@markup.italic.markdown_inline", fg = c.medium_gray_blue, gui = "italic" },
