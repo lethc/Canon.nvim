@@ -363,10 +363,10 @@ local set_groups = function()
         { hg = "FzfLuaTitle", bg = c.black, fg = c.fg, gui = "bold" },
         { hg = "FzfLuaBorder", bg = c.black, fg = c.orange2 },
         { hg = "FzfLuaPreviewBorder", bg = c.black, fg = c.orange2 },
-        { hg = "FzfLuaPrompt", bg = c.black, fg = c.red }, -- The Text>... and the current open file
+        { hg = "FzfLuaPrompt", bg = c.black, fg = c.gray06 }, -- The Text>... and the current open file
         { hg = "FzfLuaLine", bg = c.black, fg = c.fg },
-        { hg = "FzfLuaLinePlus", bg = c.black, fg = c.yellow },
-        { hg = "FzfLuaItemKindVariable", fg = c.red }, -- Coloured text when you search for a word
+        { hg = "FzfLuaLinePlus", bg = c.black, fg = c.red }, -- Selection line
+        { hg = "FzfLuaItemKindVariable", fg = c.orange }, -- Coloured text when you search for a word
         { hg = "FzfLuaSearch", fg = c.red },
 
         -- Neogit
