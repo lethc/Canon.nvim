@@ -25,7 +25,7 @@ local set_terminal_colors = function()
     vim.g.terminal_color_foreground = c.fg
 end
 
-local set_link_groups = function ()
+local set_link_groups = function()
     vim.cmd([[
         " Keywords
         hi! link @keyword.directive                     PreProc
@@ -121,6 +121,7 @@ local set_groups = function()
         { hg = "ColorColumn", bg = c.gray01 }, -- used for the columns set with 'colorcolumn'
         { hg = "Conceal" }, -- placeholder characters substituted for concealed text (see 'conceallevel')
         { hg = "Cursor", fg = c.black, bg = c.blue }, -- the character under the cursor
+        { hg = "lCursor", fg = c.black, bg = c.fg }, -- the character under the cursor
         { hg = "CursorIM" }, -- like Cursor, but used when in IME mode
         { hg = "CursorLine", bg = c.gray01 }, -- the screen line that the cursor is in when 'cursorline' is set
         { hg = "Directory", fg = c.blue }, -- directory names (and other special names in listings)
@@ -142,6 +143,9 @@ local set_groups = function()
         { hg = "MoreMsg", fg = c.magenta }, -- more-prompt
         { hg = "NonText", fg = c.gray02 }, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
         { hg = "Normal", fg = c.fg, bg = cfg.transparent and c.none or c.bg }, -- normal text
+        { hg = "NormalNC", fg = c.fg, bg = c.none }, -- normal text
+        { hg = "NormalFloat", fg = c.white, bg = c.alt_bg }, -- Normal text in floating windows.
+        { hg = "FloatBorder", fg = c.gray03, bg = c.none }, -- Border of floating windows.
         { hg = "Pmenu", fg = c.white, bg = c.black }, -- Popup menu: normal item.
         { hg = "PmenuSel", fg = c.bright_white, bg = c.gray03 }, -- Popup menu: selected item.
         { hg = "PmenuSbar", bg = c.gray02 }, -- Popup menu: scrollbar.
@@ -368,6 +372,13 @@ local set_groups = function()
         { hg = "FzfLuaLinePlus", bg = c.black, fg = c.red }, -- Selection line
         { hg = "FzfLuaItemKindVariable", fg = c.orange }, -- Coloured text when you search for a word
         { hg = "FzfLuaSearch", fg = c.red },
+
+        -- WhichKey
+        { hg = "WhichKey", fg = c.light_gray },
+        { hg = "WhichKeySeperator", fg = c.gray02 },
+        { hg = "WhichKeyGroup", fg = c.red },
+        { hg = "WhichKeyDesc", fg = c.light_gray },
+        { hg = "WhichKeyFloat", bg = c.bg },
 
         -- Neogit
         -- { hg = "NeogitNotificationInfo", fg = c.bright_green },
