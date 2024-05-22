@@ -380,6 +380,13 @@ local set_groups = function()
         { hg = "WhichKeyDesc", fg = c.light_gray },
         { hg = "WhichKeyFloat", bg = c.bg },
 
+        -- DropBar
+        { hg = "DropBarNormalFloat", bg = c.none },
+        { hg = "DropBarPreview", bg = c.none },
+        { hg = "DropBarCurrentContext", bg = c.none },
+        { hg = "DropBarMenuNormalFloat", bg = c.none },
+        { hg = "WhichKeyFloat", bg = c.bg },
+
         -- Neogit
         -- { hg = "NeogitNotificationInfo", fg = c.bright_green },
         -- { hg = "NeogitNotificationWarning", fg = c.bright_yellow },

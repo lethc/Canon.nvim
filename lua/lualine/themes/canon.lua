@@ -3,7 +3,7 @@ local colors = require("canon.colors").dark
 return {
     normal = {
         a = { fg = colors.fg, bg = colors.gray08, gui = "bold" },
-        b = { fg = colors.white, bg = colors.alt_bg },
+        b = { fg = colors.white, bg = colors.none },
         c = { fg = colors.white, bg = colors.alt_bg },
     },
     command = {
