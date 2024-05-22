@@ -386,6 +386,9 @@ local set_groups = function()
         { hg = "DropBarCurrentContext", bg = c.none },
         { hg = "DropBarMenuNormalFloat", bg = c.none },
         { hg = "WhichKeyFloat", bg = c.bg },
+        -- { hg = "DropBarIconUIIndicator", bg = c.bg, fg = c.red },
+        { hg = "DropBarIconUISeparator", bg = c.none, fg = c.red },
+        { hg = "DropBarIconUIIndicator", bg = c.none, fg = c.red },
 
         -- Neogit
         -- { hg = "NeogitNotificationInfo", fg = c.bright_green },
