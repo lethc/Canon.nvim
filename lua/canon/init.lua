@@ -73,23 +73,23 @@ local set_groups = function()
         { hg = "Constant", fg = c.cyan }, -- any constant
         { hg = "String", fg = c.medium_gray_blue }, -- a string constant: "this is a string"
         { hg = "Character", fg = c.green }, -- a character constant: 'c', '\n'
-        { hg = "Number", fg = c.magenta }, -- a number constant: 234, 0xff
+        { hg = "Number", fg = c.orange2 }, -- a number constant: 234, 0xff
         { hg = "Boolean", fg = c.magenta, cfg.boolean_style }, -- a boolean constant: TRUE, false
         { hg = "Float", fg = c.magenta }, -- a floating point constant: 2.3e10
         { hg = "Identifier", fg = c.fg, cfg.variable_style }, -- any variable name
         { hg = "Function", fg = c.cyan, gui = cfg.function_style }, -- function name (also: methods for classes)
         { hg = "Statement", fg = c.gray_blue }, -- any statement
         { hg = "Conditional", fg = c.blue }, -- if, then, else, endif, switch, etc.
-        { hg = "Repeat", fg = c.blue }, -- for, do, while, etc.
+        { hg = "Repeat", fg = c.gray_blue }, -- for, do, while, etc.
         { hg = "Label", fg = c.blue }, -- case, default, etc.
         { hg = "Operator", fg = c.white }, -- sizeof", "+", "*", etc.
         { hg = "Exception", fg = c.purple }, -- try, catch, throw
         { hg = "PreProc", fg = c.red }, -- generic Preprocessor
         { hg = "Include", fg = c.red }, -- preprocessor #include
-        { hg = "Define", fg = c.cyan }, -- preprocessor #define
+        { hg = "Define", fg = c.gray_blue }, -- preprocessor #define
         -- { hg = "Macro", fg = c.yellow, gui = "bold" }, -- same as Define
         { hg = "PreCondit", fg = c.cyan }, -- preprocessor #if, #else, #endif, etc.
-        { hg = "Type", fg = c.white, gui = "bold" }, -- int, long, char, etc.
+        { hg = "Type", fg = c.red, gui = "bold" }, -- int, long, char, etc.
         { hg = "StorageClass", fg = c.yellow }, -- static, register, volatile, etc.
         { hg = "Structure", fg = c.gray_blue, gui = "bold" }, -- struct, union, enum, etc.
         { hg = "Typedef", fg = c.yellow }, -- A typedef
@@ -222,7 +222,7 @@ local set_groups = function()
         { hg = "@tag", fg = c.blue },
         { hg = "@tag.attribute", fg = c.cyan, gui = "italic" },
         { hg = "@tag.delimiter", fg = c.gray06 },
-        { hg = "@type.builtin", fg = c.fg },
+        { hg = "@type.builtin", fg = c.magenta },
         { hg = "@variable", fg = c.fg, gui = cfg.variable_style },
         { hg = "@variable.builtin", fg = c.medium_gray_blue, gui = cfg.variable_style },
         { hg = "@variable.parameter", fg = c.white, gui = cfg.variable_style },
@@ -271,7 +271,7 @@ local set_groups = function()
         { hg = "@lsp.type.enumMember", fg = c.white, gui = "bold" },
         { hg = "@lsp.type.keyword", fg = c.gray_blue },
         { hg = "@lsp.type.namespace", fg = c.gray_blue },
-        { hg = "@lsp.type.macro", fg = c.cyan },
+        { hg = "@lsp.type.macro", fg = c.bright_white  },
         { hg = "@lsp.type.struct", fg = c.gray_blue, gui = "bold" },
         { hg = "@lsp.typemod.enum", fg = c.gray_blue, gui = "bold" },
         { hg = "@lsp.type.interface", fg = c.gray_blue, gui = "bold" },
