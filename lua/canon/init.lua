@@ -183,12 +183,12 @@ local set_groups = function()
         { hg = "htmlTagName", fg = c.cyan }, -- tag text
 
         -- Markdown
-        { hg = "markdownH1", fg = c.bright_blue, gui = "bold" },
-        { hg = "markdownH2", fg = c.bright_blue, gui = "bold" },
-        { hg = "markdownH3", fg = c.bright_blue, gui = "bold" },
-        { hg = "markdownH4", fg = c.bright_blue, gui = "bold" },
-        { hg = "markdownH5", fg = c.bright_blue, gui = "bold" },
-        { hg = "markdownH6", fg = c.bright_blue, gui = "bold" },
+        { hg = "markdownH1", fg = c.red, gui = "bold" },
+        { hg = "markdownH2", fg = c.orange2, gui = "bold" },
+        { hg = "markdownH3", fg = c.yellow, gui = "bold" },
+        { hg = "markdownH4", fg = c.cyan, gui = "bold" },
+        { hg = "markdownH5", fg = c.gray_blue, gui = "bold" },
+        { hg = "markdownH6", fg = c.magenta, gui = "bold" },
         { hg = "markdownHeadingDelimiter", fg = c.gray05 },
         { hg = "markdownHeadingRule", fg = c.gray05 },
         { hg = "markdownId", fg = c.cyan },
