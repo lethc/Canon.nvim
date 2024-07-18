@@ -45,7 +45,7 @@ M.dark = {
     gray04 = "#727272",
     gray05 = "#5C6276",
     gray06 = "#9998a8",
-    gray07 = "#f3f3ed",
+    gray07 = "#7E97AB",
     gray08 = "#323232",
     gray09 = "#1C1C1C",
     -- Special
