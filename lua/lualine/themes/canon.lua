@@ -7,20 +7,20 @@ return {
         c = { fg = colors.white, bg = colors.alt_bg },
     },
     command = {
-        a = { fg = colors.bg, bg = colors.orange, gui = "bold" },
-        z = { fg = colors.bg, bg = colors.orange, gui = "bold" },
+        a = { fg = colors.bg, bg = colors.light_gray, gui = "bold" },
+        z = { fg = colors.bg, bg = colors.light_gray, gui = "bold" },
     },
     insert = {
         a = { fg = colors.bg, bg = colors.blue, gui = "bold" },
         z = { fg = colors.bg, bg = colors.blue, gui = "bold" },
     },
     visual = {
-        a = { fg = colors.bg, bg = colors.yellow, gui = "bold" },
-        z = { fg = colors.bg, bg = colors.yellow, gui = "bold" },
+        a = { fg = colors.bg, bg = colors.light_gray, gui = "bold" },
+        z = { fg = colors.bg, bg = colors.light_gray, gui = "bold" },
     },
     terminal = {
-        a = { fg = colors.bg, bg = colors.green, gui = "bold" },
-        z = { fg = colors.bg, bg = colors.green, gui = "bold" },
+        a = { fg = colors.bg, bg = colors.cyan, gui = "bold" },
+        z = { fg = colors.bg, bg = colors.cyan, gui = "bold" },
     },
     replace = {
         a = { fg = colors.bg, bg = colors.red, gui = "bold" },
