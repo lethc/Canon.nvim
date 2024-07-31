@@ -84,7 +84,7 @@ local set_groups = function()
         { hg = "Label", fg = c.blue }, -- case, default, etc.
         { hg = "Operator", fg = c.white }, -- sizeof", "+", "*", etc.
         { hg = "Exception", fg = c.purple }, -- try, catch, throw
-        { hg = "PreProc", fg = c.red }, -- generic Preprocessor
+        { hg = "PreProc", fg = c.blue }, -- generic Preprocessor
         { hg = "Include", fg = c.red }, -- preprocessor #include
         { hg = "Define", fg = c.gray_blue }, -- preprocessor #define
         -- { hg = "Macro", fg = c.yellow, gui = "bold" }, -- same as Define
