@@ -283,6 +283,7 @@ local set_groups = function()
         { hg = "@string.special.url", fg = c.gray_blue },
 
         -- Diagnostics
+        { hg = "DiagnosticOk", fg = c.green },
         { hg = "DiagnosticError", fg = c.red },
         { hg = "DiagnosticWarn", fg = c.yellow },
         { hg = "DiagnosticInfo", fg = c.blue },
