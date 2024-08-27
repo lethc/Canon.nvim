@@ -448,6 +448,9 @@ local set_groups = function()
         { hg = "yamlFlowString", fg = c.bright_cyan },
         { hg = "yamlBlockMappingKey", fg = c.gray_blue },
         { hg = "yamlPlainScalar", fg = c.medium_gray_blue, gui = "bold" },
+
+        -- Markview
+        { hg = "MarkviewBlockQuoteSpecial", fg = c.magenta }
     }
 
     utils.highlight(highlights)
