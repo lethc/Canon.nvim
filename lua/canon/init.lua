@@ -258,7 +258,8 @@ local set_groups = function()
         { hg = "@markup.strong.markdown_inline", fg = c.gray07, gui = "bold" },
         { hg = "@markup.strong", fg = c.gray07, gui = "bold" },
         { hg = "@markup.italic.markdown_inline", fg = c.medium_gray_blue, gui = "italic" },
-        -- { hg = "@markup.quote.markdown", fg = c.bright_white, bg = c.gray08, gui = "bold,italic" }, -- This collide with markview.nvim and make it look weird
+        -- { hg = "@markup.quote.markdown", fg = c.bright_white, bg = c.gray08, gui = "bold,italic" },
+        { hg = "@markup.quote.markdown", fg = c.fg  },
         -- { hg = "@function.macro", fg = c.cyan },
         { hg = "@type.qualifier", fg = c.white, gui = "bold" },
 
