@@ -1,7 +1,7 @@
 local M = {}
 
 local function opt(key, default)
-    key = "canon-onedark_" .. key
+    key = "canon_onedark_" .. key
     if vim.g[key] == nil then
         return default
     end

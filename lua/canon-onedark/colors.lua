@@ -56,6 +56,7 @@ M.dark = {
 
     special1 = "#c5c5c5",
     special2 = "#282b37",
+    none = "NONE",
 }
 
 return M
