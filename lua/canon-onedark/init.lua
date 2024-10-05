@@ -89,6 +89,7 @@ local set_link_groups = function()
         hi! link @markup.heading.5.marker.markdown      @conceal
         hi! link @markup.heading.6.marker.markdown      @conceal
         hi! link @spell.markdown                        Normal
+        hi! link markdownError                          Normal
         hi! link FzfLuaFilePart                         FzfLuaFzfNormal
 
         ]])
