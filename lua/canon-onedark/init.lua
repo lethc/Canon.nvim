@@ -128,7 +128,7 @@ local set_groups = function()
         { hg = "PmenuSel", fg = c.black, bg = c.pmenu_bg },
         { hg = "PmenuSbar", fg = c.none, bg = c.one_gb },
         { hg = "PmenuThumb", fg = c.none, bg = c.grey },
-        { hg = "WildMenu", fg = c.base08, bg = c.base0A },
+        { hg = "WildMenu", fg = c.base0C, bg = c.base02 },
         { hg = "Comment", fg = c.grey_fg, gb = c.none, gui = cfg.comment_style },
         { hg = "Folded", fg = c.light_grey, bg = c.black2 },
         { hg = "FoldColumn", fg = c.base0C, bg = c.base00 },
@@ -482,7 +482,7 @@ local set_groups = function()
         { hg = "BufferInactiveTarget", fg = c.red, bg = c.darker_black, gui = "bold" },
 
         -- StatusLine
-        { hg = "StatusLine", fg = c.line, bg = c.statusline_bg },
+        { hg = "StatusLine", fg = c.white, bg = c.statusline_bg },
         { hg = "StatusLineNC", fg = c.none, bg = c.statusline_bg },
         { hg = "StatusLineSeparator", fg = c.line, bg = c.none },
         { hg = "StatusLineTerm", fg = c.line, bg = c.none },
