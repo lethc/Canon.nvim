@@ -794,7 +794,7 @@ local set_groups = function()
         { hg = "FlashMatch", fg = c.white, bg = c.grey, gui = "bold" },
 
         -- FZF-lua
-        { hg = "FzfLuaNormal", fg = c.base05, bg = c.darker_black }, --main fg/bg
+        { hg = "FzfLuaNormal", fg = c.base05, bg = c.black }, --main fg/bg
         { hg = "FzfLuaBorder", fg = c.base05, bg = c.black }, --main border
         -- { hg = "FzfLuaBorder", fg = c.blue, bg = c.none },
         { hg = "FzfLuaTitle", fg = c.base05, bg = c.grey, gui = "bold" }, -- main title
