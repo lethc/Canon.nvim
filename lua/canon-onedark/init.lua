@@ -133,7 +133,7 @@ local set_groups = function()
         { hg = "Folded", fg = c.light_grey, bg = c.black2 },
         { hg = "FoldColumn", fg = c.base0C, bg = c.base00 },
         { hg = "LineNr", fg = c.grey, bg = c.none },
-        { hg = "FloatBorder", fg = c.blue, bg = c.none },
+        { hg = "FloatBorder", fg = c.base04, bg = c.none },
         { hg = "FloatTitle", fg = c.white, bg = c.grey },
         { hg = "VertSplit", fg = c.line, bg = c.none },
         { hg = "Cursor", fg = c.base00, bg = c.base05 },
