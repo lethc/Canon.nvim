@@ -111,7 +111,7 @@ local set_groups = function()
         { hg = "CursorLineNr", fg = c.white, bg = c.none },
         { hg = "CursorLine", fg = c.none, bg = c.black2 },
         { hg = "Normal", fg = c.base05, bg = cfg.transparent and c.none or c.base00 },
-        { hg = "NormalNC", fg = c.base05, bg = c.base00 }, -- normal text
+        { hg = "NormalNC", fg = c.base05, bg = cfg.transparent and c.none or c.base00 }, -- normal text
         { hg = "NormalFloat", fg = c.none, bg = c.darker_black }, -- Normal text in floating windows.
         { hg = "SignColumn", fg = c.base03, bg = c.none, guisp = c.none }, -- column where signs are displayed
         { hg = "MsgArea", fg = c.base05, bg = c.base00 },
