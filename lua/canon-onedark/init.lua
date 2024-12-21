@@ -108,7 +108,7 @@ local set_groups = function()
         { hg = "DevIconDefault", fg = c.red, bg = c.none },
         { hg = "healthSuccess", fg = c.black, bg = c.green },
         { hg = "WinSeparator", fg = c.line, bg = c.none },
-        { hg = "CursorLineNr", fg = c.white, bg = c.none },
+        { hg = "CursorLineNr", fg = c.white, bg = c.none, gui = "bold" },
         { hg = "CursorLine", fg = c.none, bg = c.black2 },
         { hg = "Normal", fg = c.base05, bg = cfg.transparent and c.none or c.base00 },
         { hg = "NormalNC", fg = c.base05, bg = cfg.transparent and c.none or c.base00 }, -- normal text
