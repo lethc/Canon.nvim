@@ -129,7 +129,7 @@ local set_groups = function()
         { hg = "PmenuSbar", fg = c.none, bg = c.one_gb },
         { hg = "PmenuThumb", fg = c.none, bg = c.grey },
         { hg = "WildMenu", fg = c.base0C, bg = c.base02 },
-        { hg = "Comment", fg = c.grey_fg, gb = c.none, gui = cfg.comment_style },
+        { hg = "Comment", fg = c.grey_fg, bg = c.none, gui = cfg.comment_style },
         { hg = "Folded", fg = c.light_grey, bg = c.black2 },
         { hg = "FoldColumn", fg = c.base0C, bg = c.base00 },
         { hg = "LineNr", fg = c.grey, bg = c.none },
