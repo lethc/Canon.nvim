@@ -97,7 +97,7 @@ local set_groups = function()
         { hg = "SpecialChar", fg = c.yellow }, -- special character in a constant
         { hg = "Tag", fg = c.yellow }, -- you can use CTRL-] on this
         { hg = "Delimiter", fg = c.gray_blue }, -- character that needs attention
-        { hg = "SpecialComment", fg = c.gray04 }, -- special things inside a comment
+        -- { hg = "SpecialComment", fg = c.gray04 }, -- special things inside a comment
         { hg = "Debug" }, -- debugging statements
         { hg = "Underlined", gui = "underline" }, -- text that stands out, HTML links
         { hg = "Ignore" }, -- left blank, hidden
@@ -208,6 +208,7 @@ local set_groups = function()
         { hg = "markdownCodeDelimiter", fg = c.gray05 },
 
         -- Tree sitter
+        { hg = "@comment", fg = c.gray04, bg = c.none },
         { hg = "@boolean", fg = c.magenta, gui = cfg.boolean_style },
         { hg = "@constructor", fg = c.cyan },
         -- { hg = "@constant.builtin", fg = c.white },
@@ -309,19 +310,11 @@ local set_groups = function()
         { hg = "diffAdded", fg = c.bright_green },
         { hg = "diffRemoved", fg = c.bright_red },
         { hg = "diffChanged", fg = c.bright_yellow },
-        { hg = "diffOldFile", fg = c.gray04 },
+        { hg = "diffOldFile", fg = c.gray07 },
         { hg = "diffNewFile", fg = c.white },
         { hg = "diffFile", fg = c.gray05 },
         { hg = "diffLine", fg = c.cyan },
         { hg = "diffIndexLine", fg = c.magenta },
-
-        -- Hop
-        { hg = "HopNextKey", fg = c.bright_yellow },
-        { hg = "HopNextKey1", fg = c.bright_blue },
-        { hg = "HopNextKey2", fg = c.bright_cyan },
-        { hg = "HopUnmatched", fg = c.gray04 },
-        { hg = "HopCursor", fg = c.bright_cyan },
-        { hg = "HopPreview", fg = c.bright_blue },
 
         -- Cmp
         { hg = "CursorLineBG", bg = c.gray02 },
