@@ -1,6 +1,6 @@
-local variants = require("canon-onedark.colors")
-local utils = require("canon-onedark.utils")
-local cfg = require("canon-onedark.config").config
+local variants = require("canon-github.colors")
+local utils = require("canon-github.utils")
+local cfg = require("canon-github.config").config
 local c = variants[cfg.variant]
 local M = {}
 
@@ -48,7 +48,7 @@ local set_link_groups = function()
         hi! link @include                              Include
         " hi! link @tag.attribute                             @property
         hi! link WhichKeyFloat                         NormalFloat
-        hi! link @keyword.import                       Include
+        " hi! link @keyword.import                       Include
         hi! link TroubleSignWarning                    DiagnosticWarn
         hi! link TroubleSignHint                       DiagnosticHint
         hi! link TroubleSignOther                      DiagnosticNormal
@@ -887,7 +887,7 @@ M.colorscheme = function()
     end
 
     vim.o.termguicolors = true
-    vim.g.colors_name = "canon-onedark"
+    vim.g.colors_name = "canon-github"
 
     set_terminal_colors()
     set_groups()

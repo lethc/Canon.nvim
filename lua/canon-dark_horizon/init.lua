@@ -124,7 +124,7 @@ local set_groups = function()
         { hg = "SpellCap", fg = c.none, bg = c.none, guisp = c.base0D, gui = "undercurl" },
         { hg = "SpellLocal", fg = c.none, bg = c.none, guisp = c.base0C, gui = "undercurl" },
         { hg = "SpellRare", fg = c.none, bg = c.none, guisp = c.base0E, gui = "undercurl" },
-        { hg = "Pmenu", fg = c.none, bg = c.one_gb },
+        { hg = "Pmenu", fg = c.none, bg = c.base01 },
         { hg = "PmenuSel", fg = c.black, bg = c.pmenu_bg },
         { hg = "PmenuSbar", fg = c.none, bg = c.one_gb },
         { hg = "PmenuThumb", fg = c.none, bg = c.grey },

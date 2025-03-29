@@ -146,7 +146,7 @@ local set_groups = function()
         { hg = "NormalNC", fg = c.fg, bg = c.none }, -- normal text
         { hg = "NormalFloat", fg = c.white, bg = c.alt_bg }, -- Normal text in floating windows.
         { hg = "FloatBorder", fg = c.gray03, bg = c.none }, -- Border of floating windows.
-        { hg = "Pmenu", fg = c.white, bg = c.black }, -- Popup menu: normal item.
+        { hg = "Pmenu", fg = c.white, bg = c.gray02 }, -- Popup menu: normal item.
         { hg = "PmenuSel", fg = c.bright_white, bg = c.gray03 }, -- Popup menu: selected item.
         { hg = "PmenuSbar", bg = c.gray02 }, -- Popup menu: scrollbar.
         { hg = "PmenuThumb", bg = c.gray03 }, -- Popup menu: Thumb of the scrollbar.
