@@ -800,7 +800,7 @@ local set_groups = function()
         { hg = "FzfLuaTitle", fg = c.base05, bg = c.grey, gui = "bold" }, -- main title
         -- FzfLuaPreviewNormal = { link = "FzfLuaNormal" }, -- builtin preview fg/bg
         { hg = "FzfLuaPreviewTitle", fg = c.base05, bg = c.grey, gui = "bold" }, -- builtin preview title
-        { hg = "FzfLuaPreviewBorder", fg = c.base05, bg = c.black }, -- builtin preview border
+        { hg = "FzfLuaPreviewBorder", fg = c.black, bg = c.black }, -- builtin preview border
         { hg = "FzfLuaCursor", fg = c.base01, bg = c.base09 }, -- builtin preview `Cursor`
         { hg = "FzfLuaCursorLine", fg = c.none, bg = c.black2 }, -- builtin preview `Cursorline`
         { hg = "FzfLuaCursorLineNr", fg = c.white, bg = c.none },  -- builtin preview `CursorLineNr`

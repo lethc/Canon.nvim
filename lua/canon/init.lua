@@ -361,7 +361,7 @@ local set_groups = function()
         { hg = "FzfLuaNormal", bg = c.black, fg = c.fg },
         { hg = "FzfLuaTitle", bg = c.black, fg = c.fg, gui = "bold" },
         { hg = "FzfLuaBorder", bg = c.black, fg = c.orange2 },
-        { hg = "FzfLuaPreviewBorder", bg = c.black, fg = c.orange2 },
+        { hg = "FzfLuaPreviewBorder", fg = c.black, bg = c.black }, -- builtin preview border
         { hg = "FzfLuaPrompt", bg = c.black, fg = c.gray06 }, -- The Text>... and the current open file
         { hg = "FzfLuaLine", bg = c.black, fg = c.fg },
         { hg = "FzfLuaLinePlus", bg = c.black, fg = c.red }, -- Selection line
