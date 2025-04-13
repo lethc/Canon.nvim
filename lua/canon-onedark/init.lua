@@ -110,6 +110,8 @@ local set_groups = function()
         { hg = "WinSeparator", fg = c.line, bg = c.none },
         { hg = "CursorLineNr", fg = c.white, bg = c.none, gui = "bold" },
         { hg = "CursorLine", fg = c.none, bg = c.black2 },
+        { hg = "CursorLineSign", fg = c.none, bg = c.black2 },
+        { hg = "CursorLineFold", fg = c.none, bg = c.black },
         { hg = "Normal", fg = c.base05, bg = cfg.transparent and c.none or c.base00 },
         { hg = "NormalNC", fg = c.base05, bg = cfg.transparent and c.none or c.base00 }, -- normal text
         { hg = "NormalFloat", fg = c.none, bg = c.darker_black }, -- Normal text in floating windows.

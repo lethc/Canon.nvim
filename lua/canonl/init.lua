@@ -123,6 +123,8 @@ local set_groups = function()
         { hg = "Cursor", fg = c.black, bg = c.blue }, -- the character under the cursor
         { hg = "CursorIM" }, -- like Cursor, but used when in IME mode
         { hg = "CursorLine", bg = c.gray01 }, -- the screen line that the cursor is in when 'cursorline' is set
+        { hg = "CursorLineSign", fg = c.none, bg = c.blue },
+        { hg = "CursorLineFold", fg = c.none, },
         { hg = "Directory", fg = c.blue }, -- directory names (and other special names in listings)
         -- { hg = "DiffAdd", bg = c.dark_green, fg = c.black }, -- diff mode: Added line
         { hg = "DiffAdd", bg = c.dark_green }, -- diff mode: Added line
@@ -154,8 +156,8 @@ local set_groups = function()
         -- { hg = "SpellCap", fg = c.yellow, gui = "underline" }, -- Word that should start with a capital. This will be combined with the highlighting used otherwise.
         -- { hg = "SpellLocal", fg = c.bright_green, gui = "underline" }, -- Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
         -- { hg = "SpellRare", fg = c.magenta, gui = "underline" }, -- Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
-        { hg = "StatusLine", fg = c.white, bg = c.gray01 }, -- status line of current window
-        { hg = "StatusLineNC", fg = c.bg_dark }, -- status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+        { hg = "StatusLine", fg = c.white, bg = cfg.transparent and c.none or c.bg }, -- status line of current window
+        { hg = "StatusLineNC", fg = c.bg_dark, bg = cfg.transparent and c.none or c.bg }, -- status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
         { hg = "StatusLineTerm", fg = c.white, bg = c.gray01 }, -- status line of current :terminal window
         { hg = "StatusLineTermNC", fg = c.gray05 }, -- status line of non-current  =terminal window
         { hg = "TabLine", fg = c.gray05 }, -- tab pages line, not active tab page label
