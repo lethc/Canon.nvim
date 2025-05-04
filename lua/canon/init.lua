@@ -237,7 +237,7 @@ local set_groups = function()
         { hg = "@field.java", fg = c.cyan },
         { hg = "@variable.member", fg = c.cyan3 },
         -- TypeScript, REACT
-        { hg = "@keyword.function.tsx", fg = c.cyan },
+        { hg = "@keyword.function.tsx", fg = c.cyan, gui = cfg.function_style },
         { hg = "@tag.tsx", fg = c.cyan },
         -- Markdown
         { hg = "@markup.heading.1.markdown", fg = c.red, gui = "bold" },

@@ -178,7 +178,7 @@ local set_groups = function()
         { hg = "@field.java", fg = c.cyan },
         { hg = "@field", fg = c.cyan },
         -- TypeScript, REACT
-        { hg = "@keyword.function.tsx", fg = c.cyan },
+        { hg = "@keyword.function.tsx", fg = c.cyan, gui = cfg.function_style },
         { hg = "@tag.tsx", fg = c.cyan },
         -- Markdown
         { hg = "yamlFlowString", fg = c.bright_cyan },
