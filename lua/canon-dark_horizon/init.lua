@@ -111,7 +111,7 @@ local set_groups = function()
         { hg = "CursorLineNr", fg = c.white, bg = c.none, gui = "bold" },
         { hg = "CursorLine", fg = c.none, bg = c.black2 },
         { hg = "CursorLineSign", fg = c.none, bg = c.black2 },
-        { hg = "CursorLineFold", fg = c.none, bg = c.black },
+        { hg = "CursorLineFold", fg = c.none, bg = cfg.transparent and c.none or c.black },
         { hg = "Normal", fg = c.base05, bg = cfg.transparent and c.none or c.base00 },
         { hg = "NormalNC", fg = c.base05, bg = c.base00 }, -- normal text
         { hg = "NormalFloat", fg = c.none, bg = c.darker_black }, -- Normal text in floating windows.
@@ -133,7 +133,7 @@ local set_groups = function()
         { hg = "WildMenu", fg = c.base0C, bg = c.base02 },
         { hg = "Comment", fg = c.grey_fg, bg = c.none, gui = cfg.comment_style },
         { hg = "Folded", fg = c.light_grey, bg = c.black2 },
-        { hg = "FoldColumn", fg = c.base0C, bg = c.base00 },
+        { hg = "FoldColumn", fg = c.base0C, bg = cfg.transparent and c.none or c.base00 },
         { hg = "LineNr", fg = c.grey, bg = c.none },
         { hg = "FloatBorder", fg = c.base04, bg = c.none },
         { hg = "FloatTitle", fg = c.white, bg = c.grey },
