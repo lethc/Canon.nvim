@@ -485,8 +485,8 @@ local set_groups = function()
         { hg = "BufferInactiveTarget", fg = c.red, bg = c.darker_black, gui = "bold" },
 
         -- StatusLine
-        { hg = "StatusLine", fg = c.white, bg = c.statusline_bg },
-        { hg = "StatusLineNC", fg = c.none, bg = c.statusline_bg },
+        { hg = "StatusLine", fg = c.white, bg = cfg.transparent and c.none or c.statusline_bg },
+        { hg = "StatusLineNC", fg = c.none, bg = cfg.transparent and c.none or c.statusline_bg },
         { hg = "StatusLineSeparator", fg = c.line, bg = c.none },
         { hg = "StatusLineTerm", fg = c.line, bg = c.none },
         { hg = "StatusLineTermNC", fg = c.line, bg = c.none },
