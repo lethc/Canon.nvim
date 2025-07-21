@@ -793,7 +793,7 @@ local set_groups = function()
 
         -- Flash
         { hg = "FlashBackdrop", fg = c.grey_fg },
-        { hg = "FlashLabel", fg = c.pink, bg = c.grey, gui = "bold" },
+        { hg = "FlashLabel", fg = c.base07, bg = c.grey, gui = "bold" },
         { hg = "FlashMatch", fg = c.white, bg = c.grey, gui = "bold" },
 
         -- FZF-lua
