@@ -792,7 +792,7 @@ local set_groups = function()
         { hg = "NavicSeparator", fg = c.red, bg = c.none },
 
         -- Flash
-        { hg = "FlashBackdrop", fg = c.grey_fg },
+        { hg = "FlashBackdrop", fg = c.grey_fg2 },
         { hg = "FlashLabel", fg = c.pink, bg = c.grey, gui = "bold" },
         { hg = "FlashMatch", fg = c.white, bg = c.grey, gui = "bold" },
 
