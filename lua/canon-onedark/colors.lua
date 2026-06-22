@@ -1,62 +1,87 @@
 local M = {}
 
 M.dark = {
-    white = "#abb2bf",
-    darker_black = "#1b1f27",
-    black = "#1e222a",
-    black2 = "#252931",
-    one_bg = "#282c34",
-    one_bg2 = "#353b45",
-    one_bg3 = "#373b43",
-    grey = "#42464e",
-    grey_fg = "#565c64",
-    grey_fg2 = "#6f737b",
-    light_grey = "#6f737b",
-    red = "#e06c75",
-    light_red = "#080101",
-    light_red2 = "#100203",
-    baby_pink = "#DE8C92",
-    pink = "#ff75a0",
-    line = "#31353d",
-    line2 = "#2e303b",
-    green = "#98c379",
-    light_green = "#1c2a12",
-    light_green2 = "#233417",
-    light_green3 = "#4c7032",
-    vibrant_green = "#7eca9c",
-    nord_blue = "#81A1C1",
-    blue = "#61afef",
-    yellow = "#e7c787",
-    sun = "#EBCB8B",
-    purple = "#de98fd",
-    dark_purple = "#c882e7",
-    teal = "#519ABA",
-    orange = "#fca2aa",
-    cyan = "#a3b8ef",
-    statusline_bg = "#1e222a",
-    lightbg = "#2d3139",
-    pmenu_bg = "#61afef",
-    folder_bg = "#61afef",
-    base00 = "#1e222a",
-    base01 = "#353b45",
-    base02 = "#3e4451",
-    base03 = "#545862",
-    base04 = "#565c64",
-    base05 = "#abb2bf",
-    base06 = "#b6bdca",
-    base07 = "#c8ccd4",
-    base08 = "#e06c75",
-    base09 = "#d19a66",
-    base0A = "#e5c07b",
-    base0B = "#98c379",
-    base0C = "#56b6c2",
-    base0D = "#61afef",
-    base0E = "#c678dd",
-    base0F = "#be5046",
+    -- Base colors
+    white = "#e8e6e3", -- Warm off-white for primary text
+    darker_black = "#000000", -- Pure black for deepest elements
+    black = "#0a0a0a", -- Main background (luxury dark)
+    black2 = "#121212", -- Slight elevation
 
-    special1 = "#c5c5c5",
-    special2 = "#282b37",
+    -- Background layers (subtle luxury gradations)
+    one_bg = "#161616", -- Base UI elements
+    one_bg2 = "#1c1c1c", -- Secondary backgrounds
+    one_bg3 = "#242424", -- Tertiary backgrounds
+
+    -- Greys (warm undertones for luxury feel)
+    grey = "#2d2d2d", -- Borders/dividers
+    grey_fg = "#555555", -- Muted text
+    grey_fg2 = "#777777", -- Secondary muted text
+    light_grey = "#999999", -- Lighter muted text
+
+    -- Accent colors (sophisticated, desaturated luxury palette)
+    red = "#c97a7a", -- Muted rose
+    light_red = "#1a0c0c",
+    light_red2 = "#2a1414",
+    baby_pink = "#d4a0a0", -- Soft rose
+    pink = "#e8a0b0", -- Muted blush
+
+    green = "#8aa87d", -- Sage green
+    light_green = "#0d140a",
+    light_green2 = "#162012",
+    light_green3 = "#3d5a33",
+    vibrant_green = "#7dab8a", -- Soft emerald
+
+    nord_blue = "#7a9bb5", -- Muted steel blue
+    blue = "#7a9bb5", -- Consistent muted blue
+
+    yellow = "#d4c48a", -- Muted gold
+    sun = "#d4b87a", -- Warm gold
+
+    purple = "#b89ab8", -- Muted lavender
+    dark_purple = "#a080a0", -- Deeper muted purple
+
+    teal = "#6a9a9a", -- Muted teal
+    orange = "#c99070", -- Muted terracotta
+    cyan = "#8aaac0", -- Muted sky blue
+
+    -- Statusline
+    statusline_bg = "#0a0a0a",
+    lightbg = "#161616",
+    pmenu_bg = "#7a9bb5",
+    folder_bg = "#7a9bb5",
+
+    -- Base16 compatibility (with luxury touches)
+    base00 = "#0a0a0a", -- Background
+    base01 = "#161616", -- Slight lighter
+    base02 = "#242424", -- Mid-tone
+    base03 = "#3d3d3d", -- Visible separation
+    base04 = "#666666", -- Muted text
+    base05 = "#e8e6e3", -- Primary text (warm white)
+    base06 = "#eeebe8", -- Slightly brighter text
+    base07 = "#f5f2ef", -- Brightest text
+
+    -- Base16 accent colors (luxury palette)
+    base08 = "#c97a7a", -- Red (muted rose)
+    base09 = "#c99070", -- Orange (terracotta)
+    base0A = "#d4b87a", -- Yellow (gold)
+    base0B = "#8aa87d", -- Green (sage)
+    base0C = "#6a9a9a", -- Cyan (muted teal)
+    base0D = "#7a9bb5", -- Blue (steel blue)
+    base0E = "#b89ab8", -- Purple (lavender)
+    base0F = "#b08070", -- Brown (warm taupe)
+
+    -- Additional luxury elements
+    special1 = "#d4c48a", -- Gold accent
+    special2 = "#161616", -- Matching dark layer
     none = "NONE",
+
+    -- Extra luxury accents (you can use these for specific elements)
+    gold = "#c9a84c", -- Metallic gold
+    rose_gold = "#c99a8a", -- Rose gold
+    champagne = "#d4c4b0", -- Champagne
+    ivory = "#f0ebe6", -- Ivory white
+    charcoal = "#2a2a2a", -- Rich charcoal
+    pewter = "#6a6a6a", -- Muted metallic
 }
 
 return M
